@@ -62,7 +62,7 @@ body {
 
 }
 #mobile-nav > input {
-    display: none;
+     display: none;
 }
 
 #mobile-nav > nav {
@@ -71,11 +71,12 @@ body {
     z-index: 1;
     width: 90%;
     height: auto;
-    top: 0;
+    top: -50vh;
     background-color: #f4f4f4;
-    display: none;
     padding: 5%;
+    transition: all 0.3s ease-in-out;
 }
+
 #mobile-nav > nav > menu {
     list-style: none;
 }
@@ -122,21 +123,15 @@ body {
     top: -5px;
 }
 
-#mobile-nav > input:checked ~ nav {
+#mobile-nav:has(> input:checked) {
     display: block;
-    animation: slide-from-top 0.3s;
-    animation-timing-function: ease-in-out;
 }
 
-@keyframes slide-from-top {
-    0% {
-        top: -35vh;
-    }
-    100% {
-        top: 0;
-    }
-    
+#mobile-nav > input:checked ~ nav {
+    top: 0;
+    transition: all 0.3s ease-in-out;
 }
+
 
 .masthead {
     background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('../images/4.jpg');
@@ -210,7 +205,7 @@ section h2 {
 }
 
 section p {
-    font-size: 3.5vw;
+    font-size: 3vw;
     margin: 5% 10%;
 }
 
@@ -295,7 +290,7 @@ section p {
 
 #hover-buttons-row a {
     margin: auto;
-    padding: 30px 15%;
+    padding: 5% 20%;
     color: #f4f4f4;
     font-size: 2.5em;
     border: #f4f4f4 4px solid;
@@ -341,7 +336,6 @@ section p {
 
 form {
     background-color: #5e35b1;
-    /* width: 90%; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr 1.5fr;
@@ -357,11 +351,11 @@ form {
     grid-column: span 2;
     justify-self: center;
     align-self: center;
-    padding: 20px 80px;
+    padding: 3vw 12vw;
     font-size: 2em;
     color: #f4f4f4;
     background-color: transparent;
-    border: white 2px solid;
+    border: white 4px solid;
     cursor: pointer;
     width: inherit;
 }
@@ -376,6 +370,8 @@ form > *::placeholder {
     color: #0e0e0e;
     font-family: sans-serif;
     padding-left: 10px;
+    padding-top: 10px;
+    font-weight: 700;
 }
 
 footer {
@@ -384,14 +380,18 @@ footer {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     color: #0e0e0e;
 }
+footer p {
+    padding: 10%;
+    padding-top: 0;
+}
 
 footer > .logo {
-    width: 20vw;
-    height: 20vw;
+    width: 30vw;
+    height: 30vw;
 }
 
 
@@ -441,19 +441,27 @@ footer > .logo {
         font-size: 1.5em;
         border: #f4f4f4 4px solid;
     }
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+    }
     form > *::placeholder {
         color: transparent;
     }
     #submit {
-        padding: 10px 40px;
+        padding: 2vw 10vw;
         font-size: 1.5em;
     }
     footer {
         font-weight: normal;
     }
     footer > .logo {
-        width: 30vw;
-        height: 30vw;
+        width: 33vw;
+        height: 33vw;
+        margin: 4%;
+    }
+    footer {
+        font-size: 1.25em;
     }
     .arrow {
         width: 25px;
