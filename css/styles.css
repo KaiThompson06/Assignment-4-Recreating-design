@@ -252,9 +252,17 @@ section p {
     border: #f4f4f4 4px solid;
     width: 75%;
     height: 75%;
+    border-radius: 0%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.4s;
+}
+
+.CTA-imgs > *  > h3:hover {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
 }
 
 #row-two {
