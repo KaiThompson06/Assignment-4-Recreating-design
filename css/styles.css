@@ -260,8 +260,8 @@ section p {
 #row-two {
     background-color: #072d67;
     color: #f4f4f4;
-    padding-bottom: 75px;
-    margin-bottom: -100px;
+    padding-bottom: 175px;
+    margin-bottom: -200px;
 }
 
 #row-two h2 {
@@ -279,7 +279,6 @@ section p {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    justify-content: top;
     background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../images/5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
